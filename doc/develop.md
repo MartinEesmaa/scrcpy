@@ -355,7 +355,7 @@ Then each socket is used for its intended purpose.
 On the _video_ and _audio_ sockets, the device first sends some [codec
 metadata]:
  - On the _video_ socket, 12 bytes:
-   - the codec id (`u32`) (H264, H265 or AV1)
+   - the codec id (`u32`) (H264, H265, AV1 or APV)
    - the initial video width (`u32`)
    - the initial video height (`u32`)
  - On the _audio_ socket, 4 bytes:
