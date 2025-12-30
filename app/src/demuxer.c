@@ -229,8 +229,7 @@ run_demuxer(void *data) {
     // Config packets must be merged with the next non-config packet only for
     // H.26x
     bool must_merge_config_packet = raw_codec_id == SC_CODEC_ID_H264
-                                 || raw_codec_id == SC_CODEC_ID_H265
-                                 || raw_codec_id == SC_CODEC_ID_APV;
+                                 || raw_codec_id == SC_CODEC_ID_H265;
 
     struct sc_packet_merger merger;
 
