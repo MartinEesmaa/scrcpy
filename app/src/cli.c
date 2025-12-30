@@ -987,7 +987,7 @@ static const struct sc_option options[] = {
         .longopt_id = OPT_VIDEO_CODEC,
         .longopt = "video-codec",
         .argdesc = "name",
-        .text = "Select a video codec (h264, h265 or av1).\n"
+        .text = "Select a video codec (h264, h265, av1 or apv).\n"
                 "Default is h264.",
     },
     {
@@ -1994,7 +1994,11 @@ parse_video_codec(const char *optarg, enum sc_codec *codec) {
         *codec = SC_CODEC_AV1;
         return true;
     }
-    LOGE("Unsupported video codec: %s (expected h264, h265 or av1)", optarg);
+    if (!strcmp(optarg, "apv")) {
+        *codec = SC_CODEC_APV;
+        return true;
+    }
+    LOGE("Unsupported video codec: %s (expected h264, h265, av1 or apv)", optarg);
     return false;
 }
 

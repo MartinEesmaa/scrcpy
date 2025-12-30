@@ -73,6 +73,7 @@ The video codec can be selected. The possible values are `h264` (default),
 scrcpy --video-codec=h264  # default
 scrcpy --video-codec=h265
 scrcpy --video-codec=av1
+scrcpy --video-codec=apv
 ```
 
 H265 may provide better quality, but H264 should provide lower latency.
