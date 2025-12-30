@@ -52,7 +52,6 @@ else
         --disable-programs
         --disable-doc
         --disable-swscale
-        --disable-postproc
         --disable-avfilter
         --disable-network
         --disable-everything
